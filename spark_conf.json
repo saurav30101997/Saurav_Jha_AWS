@@ -1,0 +1,21 @@
+[
+    {
+      "Classification": "spark-defaults",
+      "Properties": {
+        "spark.master":"yarn",
+        "spark.submit.deployMode":"cluster",
+        "spark.driver.memory":"4g",
+        "spark.executor.memory":"6g",
+        "spark.driver.cores":1,
+        "spark.executor.cores":2,
+        "spark.dynamicAllocation.minExecutors":10,
+        "spark.sql.shuffle.partitions":1000,
+        "spark.sql.crossJoin.enabled":"true",        
+        "spark.hadoop.mapreduce.fileoutputcommitter.algorithm.version":2,
+        "spark.hadoop.fs.s3a.block.size":"512M",
+        "spark.driver.extraJavaOptions":"-XX:+UseG1GC",
+        "spark.executor.extraJavaOptions":"-XX:+UseG1GC",
+        "spark.sql.broadcastTimeout":3600
+      }
+    }
+  ]
